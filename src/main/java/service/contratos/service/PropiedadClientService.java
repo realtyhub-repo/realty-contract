@@ -25,7 +25,7 @@ public class PropiedadClientService {
     public PropiedadContratoResponse buscar(UUID propiedadId) {
         try {
             PropiedadContratoResponse respuesta = propiedadClient.get()
-                    .uri("/internal/propiedades/{id}", propiedadId)
+                    .uri("/internal/propiedades/{id}/contrato", propiedadId)
                     .retrieve()
                     .body(PropiedadContratoResponse.class);
 
